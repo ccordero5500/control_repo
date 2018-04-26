@@ -2,7 +2,6 @@ node default {
 }
 node 'master.puppet.vm' {
   include role::master_server
-  include role::ssh_server
   file { '/root/README':
     ensure => file,
     content => "Welocme to: ${fqdn}\n",
